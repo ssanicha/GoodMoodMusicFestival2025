@@ -1,0 +1,16 @@
+# VS Code / IDE
+.idea/
+.vscode/
+
+# Python
+__pycache__/
+*.pyc
+
+# Node
+node_modules/
+
+# Environment
+.env
+
+# Not use folder
+templates_NOT_use_ka/
