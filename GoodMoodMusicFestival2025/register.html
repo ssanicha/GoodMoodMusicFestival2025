@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GoodMoodMusicFestival2025</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script defer src="assets/js/registers.js"></script>
+</head>
+<body>
+    <!-- Navbar -->
+      <header class="navbar">
+        <h1 class="logo">GoodMood</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="lineup.html">Lineup</a>
+            <a href="register.html">Register</a>
+            <a href="info.html">Info</a>
+            <button class="ticket-btn">Buy Ticket</button>
+        </nav>
+    </header>
+
+     <!-- Header -->
+      <section class="page-header">
+        <h2>ลงทะเบียนร่วมงานฟรี!</h2>
+        <p>วันที่ 25 ธันวาคม 2568 | ⏰ เริ่ม 16:00 น. | 📍 CentralWorld</p>
+      </section>
+    <!--Register form  -->
+    <section class="register-section">
+        <form id="registerForm" class="register-form">
+            <h3>แบบฟอร์มลงทะเบียน</h3>
+
+            <label>ชื่อ - นามสกุล</label>
+            <input type="text" id="name" placeholder="กรอกชื่อ- นามสกุล" required>
+
+            <label>E-mail</label>
+            <input type="email" id="email" placeholder="example@gmail.com" required>
+
+            <label>เบอร์โทรศัพท์</label>
+            <input type="tel" id="phone" placeholder="0xx-xxx-xxxx" required>
+
+            <label class="checkbox">
+                <input type="checkbox" id="agree" required>
+                <span>ฉันยืนยันว่าข้อมูลถูกต้องและยอมรับเงื่อนไขการเข้าร่วมงาน</span>
+            </label>
+
+            <button type="submit" class="ticket-btn">ลงทะเบียน</button>
+            <p id="statusMsg" class="status"></p>
+
+        </form>
+    </section>
+
+</body>
+</html>
