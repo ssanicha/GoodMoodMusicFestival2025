@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ยืนยันการลงทะเบียนสำเร็จ</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- <script defer src="assets/js/registers.js"></script> -->
+</head>
+
+<body>
+    <!-- Navbar -->
+    <header class="navbar">
+        <h1 class="logo">GoodMood</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="lineup.html">Lineup</a>
+            <a href="register.html">Register</a>
+            <a href="info.html">Info</a>
+            <!-- <button class="ticket-btn">Buy Ticket</button> -->
+        </nav>
+    </header>
+    <section class="page-header">
+        <h2>ลงทะเบียนสำเร็จ!</h2>
+        <p>ขอบคุณที่ร่วมเป็นส่วนหนึ่งในเทศกาลคริสต์มาสปีนี้</p>
+    </section>
+
+    <section class="confirm-box">
+        <div class="ticket-icon">🎟</div>
+        <h3 id="welcome"></h3>
+        <h3>ข้อมูลการเข้าร่วมงาน</h3>
+        <p style="margin-bottom: 15px;">กรุณาแสดง Qr code นี้ที่หน้างานเพื่อรับสายรัดข้อมูล</p>
+
+        <div id="qrBox" class="qr-box">
+        </div>
+
+        <div class="detail">
+            <p><strong>งาน:</strong>GoodMoodMusicFestival2025</p>
+            <p><strong>วันที่:</strong>25 ธันวาคม 2568</p>
+            <p><strong>เวลา:</strong>ประตูเปิดเวลา 15:00 น. คอนเสิร์ตเริ่ม 16:00 น.</p>
+            <p><strong>สถานที่:</strong>ลานหน้า CentralWorld square b</p>
+            <p><strong>จำนวนผู้เข้าร่วมจำกัด:</strong>800 ท่าน</p>
+        </div>
+        <button class="ticket-btn" onclick="window.print()">พิมพ์บัตรเข้าร่วมงาน</button>
+        <button class="secondary-btn" onclick="window.location.href='index.html'">กลับหน้าแรก</button>
+    </section>
+
+    <footer>
+        <p>© 2025 GoodMood Music Festival 2025 | Follow us: IG / X : goodmood_vibe </p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <script>
+        const name = localStorage.getItem("userName") || "Guest";
+        document.querySelector("h3").innerHTML = `ยินดีต้อนรับ ${name}!`;
+        console.log("NAME =", name);
+
+        new QRCode(document.getElementById("qrBox"), {
+            text: "GoodMoodMusicFestival2025" + name,
+            width: 150,
+            height: 150
+        });
+    </script> 
+</body>
+
+</html>

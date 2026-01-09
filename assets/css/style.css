@@ -1,0 +1,452 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Thai:wght@100..900&display=swap');
+:root {
+    --red-main: #e63946;      
+    --red-dark: #b5171f;      
+    --red-hot: #ff4d5a;       
+    --white: #ffffff;
+    --offwhite: #fff3f0;
+    --black: #2b2b2b;
+    --gold: #ffd166;          
+}
+
+
+body {
+    margin:0;
+    font-family:"Noto Serif Thai", serif;
+    background-color: var(--offwhite);
+    color: #2c2c2c;
+    padding-top: 1px;
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    background: var(--red-dark);
+    position: fixed;
+    width: 95%;
+    z-index: 10;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+    flex-direction: row;
+}
+
+.logo{
+    color: #F8F3DF;
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+
+.navbar nav a {
+    color:var(--offwhite);
+    text-decoration: none;
+    margin: 0 15px;
+    transition: color 0.3s;
+}
+
+.navbar nav a:hover,
+.navbar nav a.active {
+    color: #c2a86d;
+}  
+
+.navbar {
+    animation: slideDown 0.8s ease;
+}
+
+@keyframes slideDown {
+    from { transform: translateY(-100%); }
+    to { transform: translateY(0); }
+}
+
+.navbar nav a {
+    position: relative;
+}
+
+.navbar nav a::after {
+    content: "";
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #c2a86d;
+    transition: width 0.3s;
+}
+
+.navbar nav a:hover::after {
+    width: 100%;
+}
+
+
+.ticket-btn {
+    background-color: #5a8a1c;
+    font-size: medium;
+    border: none;
+    color: #F8F3DF;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.ticket-btn:hover {
+    background: #9bbe62;
+    transform: scale(1.05);
+}
+
+
+.hero {
+    height: 100vh;
+    background: url('../img/hero_bg1.jpg') center/cover no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(34, 106, 94, 0.5);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-content h2 {
+    text-align: center;
+    padding-top: 120px;
+    font-size: 3em;
+    color: #28612e;
+    text-shadow: 0 0 15px rgba(248,243,223,0.6);
+    animation: fadeInUp 1s ease forwards, floatText 4s ease-in-out infinite;
+    
+}
+
+@keyframes floatText {
+    0%,100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+}
+
+
+.hero-content p {
+    text-align: center;
+    font-size: 1.2em;
+    color: #28612e;
+    padding-top: 10px;
+    /* margin-bottom: 20px; */
+    animation: fadeInUp 1.5s ease forwards;
+}
+
+.button a {
+    text-align: center;
+}
+
+.btn {
+    background: #c2a86d;
+    color: #a62329;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #e3d4b3;
+    color: #226a5e;
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px);}
+    to { opacity: 1; transform: translateY(0);}
+}
+
+/* Countdown */
+
+.countdown-section {
+    text-align: center;
+    padding: 60px 20px;
+    background:var(--red-main);
+    color: #ffffff;
+}
+
+.countdown {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.countdown div{
+    background:var(--white);
+    padding: 20px;
+    border-radius: 14px;
+    color: var(--red-main);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    animation: bounce 1.5s infinite;
+}
+
+.countdown span{
+    display: block;
+    font-size: 2em;
+    color: #e62929;
+}
+
+/* highlights */
+.highlights {
+    display: flex;
+    justify-content: space-around;
+    padding: 60px 20px;
+    background: #F8F3DF;
+    flex-wrap: wrap;
+}
+
+.highlight {
+    width: 250px;
+    text-align: center;
+    margin: 15px;
+    background:var(--white);
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.highlight:hover {
+    transform: scale(1.05);
+}
+
+.highlight h4{
+    color: #a62329;
+}
+
+/* lineup-page */
+
+.page-header{
+    padding: 120px 20px 40px;
+    text-align: center;
+    background: linear-gradient(to bottom right, var(--red-dark), var(--red-main));
+    color: #F8F3DF;
+}
+
+.lineup-table {
+    padding: 60px 20px;
+    display: flex;
+    justify-content: center;
+}
+
+table {
+    width: 90%;
+    max-width: 900px;
+    border-collapse: collapse;
+    background: #F8F3DF;
+    color: #2c2c2c;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+th,td {
+    padding: 15px,20px;
+    text-align: center;
+}
+
+th {
+    background: #226a5e;
+    color: #F8F3DF;
+    font-size: 1.1em;
+}
+
+tbody tr{
+    border-bottom: 1px solid #c2a86d;
+    transition: background 0.3s;
+}
+
+tbody tr:hover{
+    background: #e3d4b3;
+}
+
+.highlight-info {
+    text-align: center;
+    padding: 60px 20px;
+    background: #F8F3DF;
+    color: #226a5e;
+}
+
+.highlight-info hh3 {
+    color: #a62329;
+}
+
+/* Register page */
+
+.register-section{
+    display: flex;
+    justify-content: center;
+    padding: 60px 20px;
+    background: #e3d4b3;
+}
+
+.register-form{
+    width: 90%;
+    max-width: 500px;
+    background: #F8F3DF;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(166, 35, 41, 0.3);
+    color: #2c2c2c;
+}
+
+.register-form h3{
+    text-align: center;
+    color: #a62329;
+    margin-bottom: 25px;
+}
+
+.register-form label {
+    display: block;
+    margin-top: 15px;
+}
+
+.register-form input[type="text"],
+.register-form input[type="email"],
+.register-form input[type="tel"] {
+    width: 100%;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #c2a86d;
+    margin-top: 8px;
+    background: #fff;
+    color: #333;
+}
+
+.register-form .checkbox{
+    display: flex;
+    align-items: start;
+    margin-top: 15px;
+    font-size: 0.9em;
+    color: #333;
+}
+
+.register-form .checkbox input {
+    margin-top: 10px;
+    transform: scale(1.2);
+}
+
+.status {
+    margin-top: 15px;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* footer */
+
+footer{
+    text-align: center;
+    padding: 20px;
+    background: var(--red-dark);
+    color: #F8F3DF;
+    display: flex;
+    flex-direction: column;
+}
+
+.confirm-box{
+    background: #F8F3DF;
+    border-radius: 12px;
+    max-width: 450px;
+    margin: 40px auto;
+    text-align: center;
+    padding: 35px;
+    border: 3px solid #c2a86d;
+    box-shadow: 0 6px 22px rgba(0, 0, 0, 0.18);
+}
+
+.ticket-icon{
+    font-size: 50px;
+    margin-bottom: 10px;
+}
+
+.qr-box{
+    margin: 20px auto;
+    background: white;
+    padding: 12px;
+    border-radius: 8px;
+    border: 2px solid #c2a86d;
+    display: inline-block;
+}
+
+.detail{
+    margin-top: 20px;
+    text-align: left;
+    color: #226a5e;
+    font-size: 15px;
+}
+
+.secondary-btn{
+    margin-top: 12px;
+    background: #e3d4b3;
+    padding: 10px 18px;
+    border-radius:8px ;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    color: #5a8a1c;
+}
+
+.secondary-btn:hover{
+    background: #c2a86d;
+}
+
+/* Snow overlay */
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    background-image: 
+      radial-gradient(2px 2px at 20% 30%, white 50%, transparent 51%),
+      radial-gradient(2px 2px at 70% 10%, white 50%, transparent 51%),
+      radial-gradient(1.5px 1.5px at 40% 80%, white 50%, transparent 51%);
+    animation: snowMove 10s linear infinite;
+    opacity: 0.8;
+    z-index: 999;
+}
+
+@keyframes snowMove {
+    from { transform: translateY(-100px); }
+    to   { transform: translateY(100vh); }
+}
+
+/* comfirm */
+.page-header {
+    padding: 140px 20px 40px; 
+    text-align: center;
+
+    /* RED FESTIVE */
+    background: linear-gradient(
+        135deg,
+        #b31217,
+        #e52d27
+    );
+
+    color: #fff;
+    box-shadow: inset 0 -6px 0 rgba(255,255,255,0.15);
+    animation: slideDown 0.8s ease;
+}
+
+.page-header h2 {
+    font-size: 2.6rem;
+    margin-bottom: 12px;
+    letter-spacing: 1px;
+}
+
+.page-header p {
+    font-size: 1.1rem;
+    opacity: 0.95;
+}
