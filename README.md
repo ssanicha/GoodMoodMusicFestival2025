@@ -11,3 +11,12 @@ A Web for browsing festival lineup and registering for events.
 - View Event lineup
 - Register for events
 - Store user data in Database
+## Screenshots
+### Home Page
+![Home](screenshots/home.png)
+### Lineup Page
+![Lineup](screenshots/lineup.png)
+### Registeratine Success
+![Connfirm](screenshots/register-success.png)
+### Database (MySQL)
+1[Database](screenshots/database.png)
