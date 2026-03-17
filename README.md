@@ -16,7 +16,7 @@ A Web for browsing festival lineup and registering for events.
 ![Home](GoodMoodMusicFestival2025/screenshots/home.png)
 ### Lineup Page
 ![Lineup](GoodMoodMusicFestival2025/screenshots/lineup.png)
-### Registeratine Success
+### Registeraion Success
 ![Connfirm](GoodMoodMusicFestival2025/screenshots/register_success.png)
 ### Database (MySQL)
 ![Database](GoodMoodMusicFestival2025/screenshots/database.png)
