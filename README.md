@@ -1,6 +1,6 @@
 # GoodMooddMusicfestival Website
 ## Description
-A Web for browsing festival line up and registering for events.
+A Web for browsing festival lineup and registering for events.
 
 ## Tech Stack
 - HTML , CSS , JavaScript
